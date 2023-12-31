@@ -6,7 +6,7 @@ from users.api.views import UserApiViewSet, UserApiView
 
 router_user = DefaultRouter()
 
-router_user.register(prefix='users', viewset=UserApiViewSet, basename='users')
+router_user.register(prefix='users', basename='users', viewset=UserApiViewSet)
 
 urlpatterns = [
     path('auth/me/', UserApiView.as_view(), name='me'),
